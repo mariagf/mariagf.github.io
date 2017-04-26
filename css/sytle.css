@@ -40,10 +40,7 @@ h1{
 div a{
     font-family: Quicksand;
     color: aliceblue;
-}
-
-#navBar{
-    padding-top: 20dp;
+    font-size:30dp;
 }
 
 #rec{

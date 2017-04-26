@@ -10,6 +10,13 @@ var baseUrl = "https://api.api.ai/v1/";
 			$("#rec").click(function(event) {
 				switchRecognition();
 			});
+            
+            var title = new Vue({
+              el: '#title',
+              data: {
+                title: 'Digital Assitant'
+              }
+            })
 		});
 		var recognition;
 		function startRecognition() {
