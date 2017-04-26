@@ -19,8 +19,7 @@ driver.get("http://mariagf.github.io")
 ###################################
 
 title = driver.find_element_by_id("title")
-#assert title.text == "Digital Assistant"
-print title.text
+assert title.text == "Digital Assistant"
 
 #############################
 # Voice Recognition - Music #

@@ -10,7 +10,7 @@ var baseUrl = "https://api.api.ai/v1/";
 			$("#rec").click(function(event) {
 				switchRecognition();
 			});
-            
+
             var title = new Vue({
               el: '#title',
               data: {
@@ -38,7 +38,7 @@ var baseUrl = "https://api.api.ai/v1/";
 			recognition.lang = "en-US";
 			recognition.start();
 		}
-	
+
 		function stopRecognition() {
 			if (recognition) {
 				recognition.stop();
