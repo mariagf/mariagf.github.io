@@ -14,7 +14,7 @@ var baseUrl = "https://api.api.ai/v1/";
             var title = new Vue({
               el: '#title',
               data: {
-                title: 'Digital Assitant'
+                title: 'Digital Assistant'
               }
             })
 		});
