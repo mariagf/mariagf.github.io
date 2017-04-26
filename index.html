@@ -4,11 +4,11 @@
     <!--===============
     1 ) Head Section
     ================-->
-    <title>DOSE Voice Recognition</title>
+    <title id="pageTitle">DOSE Voice Recognition</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
     <!--( a ) Fav Icon -->
-    <link rel="icon" type="image/ico" href="/images/icon/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/icon/favicon.png">
     
     <!--( b ) CSS Stylesheets -->
         <!-- Bootstrap -->
@@ -22,13 +22,13 @@
 </head>
 <body>
      <!--=========
-    3 ) Navigation Bar
+    2 ) Navigation Bar
     ==========-->
     <div class="collapse navbar-collapse" id="navBar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://mariagf.github.io">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="https://dose.com/tagged/food">Food</a></li>
-        <li><a href="https://dose.com/tagged/music">Music</a></li>
+        <li class="active"><a id="home" href="http://mariagf.github.io">Home <span class="sr-only">(current)</span></a></li>
+        <li><a id="food" href="https://dose.com/tagged/food">Food</a></li>
+        <li><a id="music" href="https://dose.com/tagged/music">Music</a></li>
       </ul>
     </div>
     <!--=========
@@ -54,7 +54,7 @@
     </div>
     
     <!--============
-    9 ) Javascript
+    4 ) Javascript
     =============-->
     <script src="https://unpkg.com/vue"></script>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
