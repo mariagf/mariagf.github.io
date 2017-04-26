@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <!--===============
+    1 ) Head Section
+    ================-->
+    <title>DOSE Voice Recognition</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <!--( a ) Fav Icon -->
+    <link rel="icon" type="image/ico" href="/images/icon/favicon.ico">
+    
+    <!--( b ) CSS Stylesheets -->
+        <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <!-- Library -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+    
+        <!-- STYLE Sheets -->
+    <link type="text/css" rel="stylesheet" href="css/sytle.css">
+    
+</head>
+<body>
+     <!--=========
+    3 ) Navigation Bar
+    ==========-->
+    <div id="navBar" class="w3-bar w3-dark-grey">
+      <a href="" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
+      <a href="https://dose.com/tagged/music" class="w3-bar-item w3-button w3-mobile" >Music</a>
+      <a href="https://dose.com/tagged/food" class="w3-bar-item w3-button w3-mobile">Food</a>
+    </div>
+    
+    <!--=========
+    3 ) Homepage
+    ==========-->
+    <!--( a ) Logo -->
+    <div class="logo">
+        <Image id="logo" src="images/dose_logo.png"></Image>
+    </div>
+    
+    <!--( b ) Title -->
+    <div class="home-page">
+        <h1>Digital Asistant</h1>
+    </div>
+    
+    <!--( c ) Speaker -->
+	<br>
+    <div>
+        <input id="input" type="text"> 
+        <!--<textarea id="response" cols="40" rows="20"></textarea>-->
+	</div>
+    <br>
+    <div>
+        <button id="rec" class="micro"></button>
+    </div>
+    
+    <!--============
+    9 ) Javascript
+    =============-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/voiceRecognition.js"></script>
+</body>
+</html>

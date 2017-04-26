@@ -1,0 +1,56 @@
+.micro{
+    width: 100px;
+    height: 100px;
+    background: url(../images/microphone.png);
+    
+}
+
+.stop{
+    width: 100px;
+    height: 100px;
+    background: url(../images/stop.png);
+}
+
+.logo{
+    margin-top: 20dp;
+}
+
+body { 
+    text-align: center;
+    vertical-align: center;
+    background-color: #243345;
+}
+
+#input{
+    height: 40px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 300px;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 30dp;
+}
+
+h1{
+    color: aliceblue;
+    font-family: Quicksand;
+}
+
+div a{
+    font-family: Quicksand;
+    color: aliceblue;
+}
+
+#navBar{
+    padding-top: 20dp;
+}
+
+#rec{
+    border-style:none;
+}
+
+#logo{
+    width: 350px;
+    height: 160px;
+}
