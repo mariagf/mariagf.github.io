@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------
    Name         : DOSE - Developer Coding Challenge VoiceRegonition.js
 
-   Version      :  2.0
+   Version      :  3.0
 
    Author       :  Maria Garcia Fernandez
 
@@ -12,46 +12,47 @@
 /***********************
 * Voice Recognition JS *
 ************************/
-var accessToken = "56838c380b9148f085e21807deed03c0";
+var accessToken = "56838c380b9148f085e21807deed03c0"; // Client access token
 var baseUrl = "https://api.api.ai/v1/";
 
 $(document).ready(function() {
-	$("#input").keypress(function(event) {
+	$("#input").keypress(function(event) { // To access by entering the message as a text
 		if (event.which == 13) {
 			event.preventDefault();
 			send();
 		}
 	});
-	$("#rec").click(function(event) {
+	$("#rec").click(function(event) { // To access by using the microphone
 		switchRecognition();
 	});
-  var title = new Vue({
-  	el: '#title',
-    data: {
-      title: 'Digital Assistant'
-    }
-  })
+    var title = new Vue({ // Title by Vue.js
+        el: '#title',
+        data: {
+            title: 'Digital Assistant'
+        }
+    })
 });
 
 var recognition;
 
 function startRecognition() {
-	recognition = new webkitSpeechRecognition();
-	recognition.onstart = function(event) {
+	recognition = new webkitSpeechRecognition(); // Create a webkitSpeechRecognition object
+	recognition.onstart = function(event) { // Check if we are going to start talking or if we are 
 		updateRec();
 	};
-	recognition.onresult = function(event) {
-		var text = "";
-    for (var i = event.resultIndex; i < event.results.length; ++i) {
-    	text += event.results[i][0].transcript;
-    }
-    setInput(text);
-		stopRecognition();
+	recognition.onresult = function(event) { // Transcription of the audio to text
+        var text = "";
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+            text += event.results[i][0].transcript;
+        }
+        $("#input").val(text); // Show the audio as text in the input field
+        send();
+        stopRecognition();
 	};
 	recognition.onend = function() {
 		stopRecognition();
 	};
-	recognition.lang = "en-US";
+	recognition.lang = "en-US"; // Language used
 	recognition.start();
 }
 
@@ -71,17 +72,20 @@ function switchRecognition() {
 	}
 }
 
-function setInput(text) {
-	$("#input").val(text);
-  if(text.includes("show me music")){
-    $(location).attr('href', 'https://dose.com/tagged/music')
-  } else if(text.includes("show me food")){
-    $(location).attr('href', 'https://dose.com/tagged/food')
-  }
-	send();
+function getAction(action) { // Select the action triggered by the tags and intents in API.AI
+    switch(action){
+        case "open_web_Music":
+            $(location).attr('href', 'https://dose.com/tagged/music');
+            break;
+        case "open_web_Food":
+            $(location).attr('href', 'https://dose.com/tagged/food');
+            break;
+        default:
+            break;
+    }
 }
 
-function updateRec() {
+function updateRec() { // Change the micro button for the stop button
   if(recognition){
     $("#rec").attr('class', 'stop');
   } else {
@@ -89,7 +93,7 @@ function updateRec() {
   }
 }
 
-function send() {
+function send() { // ajax query to the API in order to obtain the action established to the spoken or written data
 	var text = $("#input").val();
 	$.ajax({
 		type: "POST",
@@ -101,15 +105,10 @@ function send() {
 		},
 		data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 		success: function(data) {
-			setResponse(JSON.stringify(data, undefined, 2));
+            getAction(JSON.parse(JSON.stringify(data, undefined, 2)).result.action);
 		},
 		error: function() {
-			setResponse("Internal Server Error");
+            getAction(JSON.parse("Internal Server Error").result.action);
 		}
 	});
-	setResponse("Loading...");
-}
-
-function setResponse(val) {
-	$("#response").text(val);
 }
