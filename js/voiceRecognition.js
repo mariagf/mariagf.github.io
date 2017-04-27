@@ -12,7 +12,7 @@
 /***********************
 * Voice Recognition JS *
 ************************/
-var accessToken = "0dad8babeb0240849eb691ceaddbc897";
+var accessToken = "56838c380b9148f085e21807deed03c0";
 var baseUrl = "https://api.api.ai/v1/";
 
 $(document).ready(function() {
