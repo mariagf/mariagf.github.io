@@ -1,7 +1,15 @@
 # mariagf.github.io
-/**********************************
-* DOSE Developer Coding Challenge *
-***********************************/
+<!--------------------------------------------------
+   Name         : DOSE - Developer Coding Challenge
+
+   Version      :  2.0
+
+   Author       :  Maria Garcia Fernandez
+
+   Author URL   :  www.garciafdez.com
+
+   Author Email : maria@garciafdez.com
+---------------------------------------------------->
 
 /*********
 * HOW TO *
@@ -73,7 +81,7 @@ os.system("say 'DOSE, show me food'")
 drive.find_element_by_id("rec").click()
 time.sleep(4)
 ##################################
-# Checking the Menu Funcionality #
+# Checking the Menu Functionality #
 #       1. Music                 #
 #       2. Food                  #
 #       3. Home                  #

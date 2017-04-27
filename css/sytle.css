@@ -1,27 +1,47 @@
-.micro{
-    width: 100px;
-    height: 100px;
-    background: url(../images/microphone.png);
-    
-}
+/*-------------------------------------------------------
+   Name         : DOSE - Developer Coding Challenge CSS
 
-.stop{
-    width: 100px;
-    height: 100px;
-    background: url(../images/stop.png);
-}
+   Version      :  2.0
 
-.logo{
-    margin-top: 20dp;
-}
+   Author       :  Maria Garcia Fernandez
 
-body { 
+   Author URL   :  www.garciafdez.com
+
+   Author Email : maria@garciafdez.com
+-------------------------------------------------------------*/
+/****************
+* Main Page CSS *
+*****************/
+body {
     text-align: center;
     vertical-align: center;
     background-color: #243345;
 }
 
-#input{
+h1 {
+    color: aliceblue;
+    font-family: Quicksand;
+}
+
+div a {
+    font-family: Quicksand;
+    color: aliceblue;
+    font-size:30dp;
+}
+
+.micro {
+    width: 100px;
+    height: 100px;
+    background: url(../images/microphone.png);
+}
+
+.stop {
+    width: 100px;
+    height: 100px;
+    background: url(../images/stop.png);
+}
+
+#input {
     height: 40px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -32,22 +52,11 @@ body {
     font-size: 30dp;
 }
 
-h1{
-    color: aliceblue;
-    font-family: Quicksand;
-}
-
-div a{
-    font-family: Quicksand;
-    color: aliceblue;
-    font-size:30dp;
-}
-
-#rec{
+#rec {
     border-style:none;
 }
 
-#logo{
+#logo {
     width: 350px;
     height: 160px;
 }

@@ -1,3 +1,18 @@
+/*---------------------------------------------------------------------
+   Name         : DOSE - Developer Coding Challenge Testing.py
+
+   Version      :  2.0
+
+   Author       :  Maria Garcia Fernandez
+
+   Author URL   :  www.garciafdez.com
+
+   Author Email : maria@garciafdez.com
+----------------------------------------------------------------------*/
+##################################
+# Testing Python file - Selenium #
+##################################
+
 ###########
 # Imports #
 ###########
@@ -26,7 +41,7 @@ assert title.text == "Digital Assistant"
 #############################
 
 driver.find_element_by_id("rec").click()
-time.sleep(4)
+time.sleep(2) // to allow the use of the microphon
 os.system("say 'DOSE, show me music'")
 time.sleep(4)
 
